@@ -1,11 +1,23 @@
+from itertools import chain 
 def intersection(arrays):
     """
     YOUR CODE HERE
     """
     # Your code here
-
-    return result
-
+    numbers = list(chain(arrays))
+    # print(numbers) 
+    x = {}
+    
+    for i in numbers:
+        
+        if i not in x:
+    
+            x[i] = 0
+        x[i] += 1
+        
+        if i[1] == len(arrays):
+            return i[0]
+    
 
 if __name__ == "__main__":
     arrays = []
