@@ -5,10 +5,16 @@
 def finder(files, queries):
     """
     YOUR CODE HERE
-    """
+    """      
     # Your code here
+    o = []
+    for i in files:
+        for x in queries:
+            if i.endswith(x):
+                o.append(i)
+    
+    return o
 
-    return result
 
 
 if __name__ == "__main__":

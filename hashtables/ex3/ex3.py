@@ -1,4 +1,6 @@
-from itertools import chain 
+from itertools import chain
+import string
+
 def intersection(arrays):
     """
     YOUR CODE HERE
@@ -7,16 +9,25 @@ def intersection(arrays):
     numbers = list(chain(arrays))
     # print(numbers) 
     x = {}
-    
-    for i in numbers:
+    str1 = ' '.join([str(elem) for elem in numbers])
+    str2 = str1.strip("[] ,")
+    # str1.translate(str1.maketrans("","",'":;,.-+=/\\|[]{}()*^&'))
+    y = str2.split()
+    # for l in numbers:
+    #     str1 += l
+    # print(str1)
+    for i in y:
         
         if i not in x:
     
             x[i] = 0
         x[i] += 1
-        
-        if i[1] == len(arrays):
+        # print(x)
+
+        if i[len(1)] == len(arrays):
             return i[0]
+        
+        
     
 
 if __name__ == "__main__":
